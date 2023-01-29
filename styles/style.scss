@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+@mixin flex-default {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+@mixin flex-column {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+$linksColor: white;
+
+
+
+.header {
+    width: 100%;
+    height: 160px;
+    background-color: black;
+}
+.header__container {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    @include flex-default;
+}
+.navigation {
+    width: 55%;
+    height: 40%;
+    @include flex-default;
+}
+.link {
+    font-size: 25px;
+    color: $linksColor;
+    font-family: 'Roboto', sans-serif;
+}
+.header__buy {
+    width: 7%;
+    height: 50%;
+    @include flex-center;
+}
+.poisk {
+    margin-top: 7px;
+}
+
+
+
+@media only screen and (max-width : 1680px) {
+    .navigation {
+        width: 58%;
+    }
+}
+@media only screen and (max-width : 1366px) {
+    .navigation {
+        width: 60%;
+    }
+    .link {
+        font-size: 23px;
+    }
+}
+@media only screen and (max-width : 1280px) {
+    .header {
+        height: 140px;
+    }
+    .logo {
+        height: 106px;
+        width: 130px;
+    }
+    .navigation {
+        width: 62%;
+    }
+    .link {
+        font-size: 22px;
+    }
+}
+@media only screen and (max-width : 1024px) {
+    .header {
+        height: 130px;
+    }
+    .logo {
+        height: 96px;
+        width: 117px;
+    }
+    .link {
+        font-size: 18px;
+    }
+    .korzina {
+        width: 56px;
+        height: 29px;
+    }
+    .poisk {
+        width: 20px;
+        height: 20px;
+        margin-top: 0;
+    }
+}
+@media only screen and (max-width : 800px)  {
+    .header {
+        height: 120px;
+    }
+    .logo {
+        height: 86px;
+        width: 105px;
+    }
+    .link {
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width : 768px)  {
+    // .header__container {
+    //     // @include flex-around;
+    // }
+    .navigation {
+        display: none;
+    }
+    .header__logo {
+        @include flex-default;
+        width: 22%;
+        height: 100%;
+        position: relative;
+        left: 100px;
+    }
+    .apple {
+        color: white;
+        width: 70%;
+        height: 50%;
+        font-size: 40px;
+        font-family: 'Roboto', sans-serif;
+        margin-top: 15px;
+    }
+    .logo {
+        height: 43px;
+        width: 52px;
+    }
+    .header__buy {
+        width: 120px;
+        height: 100%;
+        @include flex-default;
+    }
+    .burger {
+        width: 30px;
+        height: 21px;
+        @include flex-column;
+        margin-left: 10px;
+    }
+    .burger__line {
+        background-color: white;
+        width: 100%;
+        height: 2px;
+    }
+}
+@media only screen and (max-width : 700px)  {
+    .apple {
+        color: white;
+        width: 72%;
+        height: 50%;
+        font-size: 35px;
+        font-family: 'Roboto', sans-serif;
+        margin-top: 20px;
+    }
+    .logo {
+        height: 42px;
+        width: 49px;
+    }
+}
+@media only screen and (max-width : 600px)  {
+    .apple {
+        color: white;
+        width: 70%;
+        height: 50%;
+        font-size: 30px;
+        font-family: 'Roboto', sans-serif;
+        margin-top: 26px;
+    }
+    .logo {
+        height: 37px;
+        width: 44px;
+    }
+}
+@media only screen and (max-width : 533px)  {
+    .header__logo {
+        @include flex-default;
+        left: 30px;
+    }
+    .apple {
+        color: white;
+        width: 70%;
+        height: 50%;
+        font-size: 26px;
+        font-family: 'Roboto', sans-serif;
+        margin-top: 32px;
+    }
+    .logo {
+        height: 31px;
+        width: 38px;
+    }
+}
+@media only screen and (max-width : 465px)  {
+    .apple {
+        font-size: 22px;
+        margin-top: 37px;
+    }
+    .logo {
+        height: 25px;
+        width: 30px;
+    }
+}
+@media only screen and (max-width : 400px)  {
+    .header__logo {
+        width: 25%;
+    }
+}
+@media only screen and (max-width : 360px)  {
+    .header__logo {
+        width: 27%;
+    }
+}
+@media only screen and (max-width : 320px)  {
+    .header__logo {
+        width: 30%;
+    }
+}
